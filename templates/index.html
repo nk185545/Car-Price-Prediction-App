@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+          background-image: url('static/images/c4.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          z-index : -1;
+        }
+
+        input{
+            width : 250px;
+        }
+        select{
+            width : 200px;
+            height:30px;
+        }
+        .divtag{
+            width:60%;
+        }
+        .prev5{
+        width : 300px;
+        }
+        .details{
+            color : orange;
+        }
+    </style>
+    <title>Car Price Predction</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <div class="topnav">
+        <div class="topnav-centered">
+            <a href="https://github.com/akd15102091?tab=repositories" target="_blank" class="active"><h3>CAR-PRICE-PREDICTION</h3></a>
+        </div>
+    </div>
+    <br>
+    <center>
+        <br>
+        <h4 class="details">#-- Enter Details ==>></h4>
+    </center>
+    <br><br>
+    <div class="container">
+        <form action="\predict" method="post">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="text" name="year" placeholder="Year (of buy) " required="required" />
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="Present_Price" placeholder="Enter Showroom-Price (in Lacs)" required="required" />
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="text" name="Kms_Driven" placeholder="How Many Kilometers Drived" required="required" />
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="Owner" placeholder="No of Prev Owners(0 or 1 or 3) ?" required="required" />
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <!-- Batting Team Dropdown -->
+                    <select class="form-input align-center" name="FuelType" required="required">
+                        <option value="none">-- Fuel Type --</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="CNG">CNG</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                        <!-- Batting Team Dropdown -->
+                    <select class="form-input align-center" name="SellerType" required="required">
+                        <option value="none">-- Seller Type --</option>
+                        <option value="Dealer">Dealer</option>
+                        <option value="Individual">Individual</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-4">
+                        <!-- Batting Team Dropdown -->
+                    <select class="form-input align-center" name="TransmissionType" required="required">
+                        <option value="none">-- Transmission Type --</option>
+                        <option value="Manual Car">Manual Car</option>
+                        <option value="Automatic Car">Automatic Car</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br>
+        <h3 style="color : white">{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+        <p>©AKD</p>
+
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
